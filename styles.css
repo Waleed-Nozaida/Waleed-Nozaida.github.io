@@ -1,0 +1,307 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    
+} */
+
+#background_img {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    align-items: center;
+    z-index: 0;
+    /* filter: blur(1px); */
+}
+
+#center-box {
+    /* border: red solid 1px; */
+    height: 99%;
+    width: 80%;
+    top: 0;
+    left: 10%;
+    position:absolute;
+    z-index: 10;
+}
+
+/* navbar start */
+#navbar {
+    position: fixed;
+    z-index: 100;
+    height: 5%;
+    width: 80%;
+    margin: 5px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+    background-color: rgba(0, 0, 0, 0.542);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.navbar-link {
+    /* border: red dotted 2px; */
+    padding: 2px 0 2px 0;
+    font-size: 20px;
+    font-family: "Dancing Script";
+    color:white;
+    text-decoration: none;
+}
+/* navbar end */
+
+/* AboutMe start */
+#AboutMe {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    column-gap: 20px;
+    margin-top: 10%;
+    scroll-margin-top: 150px;
+}
+
+@media screen and (min-width:700px) {
+    #AboutMe {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #AboutMe-content {
+        width: 55%;
+        margin-top: 0;
+    }
+    #AboutMe-picture {
+        width: 40%;
+        margin-top: 0;
+        text-align: center;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .photo {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* #AboutMe>div {
+    border: red solid 2px;
+} */
+ 
+#AboutMe-content {
+    width: 90%;
+    color: green;
+    /* background-color: rgba(0, 0, 0, 0.468); */
+    margin-top: 5%;
+    gap: 15px;
+    font-family: "Honk";
+    font-size: 20px;
+}
+
+#AboutMe-content > h1 {
+    justify-self: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#AboutMe-content > h4 {
+    justify-self: center;
+    font-weight: bolder;
+    /* border: red solid 2px; */
+    margin-top: -30px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+#AboutMe-content > p {
+    font-family: "Bungee Tint";
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#AboutMe-picture {
+    width: 40%;
+    text-align: center;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    /* border: red solid 2px; */
+}
+
+#resume-button {
+    background-color: rgb(30, 44, 89);
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 20px;
+    font-family: "Dancing Script";
+    cursor: pointer;
+}
+
+#AboutMe-content > a {
+    margin-left: 35%;
+}
+/* AboutMe end */
+
+/* Projects Start */
+#Projects {
+    color: white;
+    /* border: red solid 2px; */
+    margin-top: 60px;
+    padding: 3% 0 0 3%;
+    font-weight: 400;
+}
+
+#projects-header {
+    font-family: "Honk";
+    font-size: 22px;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+}
+
+@keyframes cards-background {
+  0%   { background-color: rgba(161, 140, 209, 0.3); }
+  50%  { background-color: rgba(248, 113, 209, 0.422); }
+  100% { background-color: rgba(161, 140, 209, 0.3); }
+}
+
+div.card {
+    background-color: rgba(247, 142, 4, 0.226);
+    border-radius: 20px;
+    padding: 20px 25px;
+    /* border: red solid 2px; */
+    flex-basis: 42%;
+    margin-bottom: 50px;
+    animation-name: cards-background;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+div.card > h2 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    color: rgb(255, 0, 0);
+}
+
+div.card > span {
+    font-size: 18px;
+    padding: 5px 30px;
+}
+
+div.card > p {
+    font-size: 16px;
+}
+/* Projects End */
+
+/* Skills Start*/
+
+#Skills {
+    padding: 3% 0 0 3%;
+    color: white;
+    /* border: red solid 2px; */
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#skills-header {
+    font-family: "Honk";
+    font-size: 22px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.progress-bar {
+    background: #444;
+    border-radius: 10px;
+    height: 30px;
+    width: 350px;
+    margin: 15px 0 15px 0;
+    overflow: hidden;
+}
+.progress {
+    background: linear-gradient(90deg, #554201, #ff9800);
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes shine {
+    0% { left: -40%; }
+    100% { left: 100%; }
+}
+
+.progress::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -40%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
+    animation: shine 2s linear infinite;
+    pointer-events: none;
+}
+/* Alternate direction for even bars */
+.progress-bar:nth-child(even) .progress::after {
+    animation-direction: alternate;
+}
+/* Skills End*/
+
+/* Contact Start */
+#Contact {
+    margin-top: 100px;
+    display: flex;
+    /* border: red solid 2px; */
+    min-height: 60px;
+    gap: 30px;
+    justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.249); */
+}
+
+
+#Contact a {
+    color: violet;
+    /* background: rgba(200,200,255,0.2); */
+    font-size: 25px;
+    display: inline-block;
+    transition: transform 1s;
+}
+
+#Contact a:hover {
+    transform: scale(2.5, 2.5);
+}
+/* Contact End */
